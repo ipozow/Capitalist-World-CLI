@@ -37,7 +37,7 @@ final class GameManager {
     }
 
     @discardableResult
-    func startGame(named name: String?) throws -> Game {
+    func startGame(named name: String?, playerName: String, companyName: String) throws -> Game {
         if let activeGame = currentGame, activeGame.gameStatus == .active {
             throw GameManagerError.activeGameInProgress(activeGame.name)
         }
@@ -45,7 +45,16 @@ final class GameManager {
         let context = stack.context
         let game = Game(context: context)
         game.id = UUID()
-        game.name = name?.isEmpty == false ? name! : localization.defaultGameName(for: Date())
+
+        let trimmedName = name?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        game.name = trimmedName.isEmpty ? localization.defaultGameName(for: Date()) : trimmedName
+
+        let trimmedPlayer = playerName.trimmingCharacters(in: .whitespacesAndNewlines)
+        game.playerName = trimmedPlayer.isEmpty ? playerName : trimmedPlayer
+
+        let trimmedCompany = companyName.trimmingCharacters(in: .whitespacesAndNewlines)
+        game.companyName = trimmedCompany.isEmpty ? companyName : trimmedCompany
+
         game.gameStatus = .active
         let now = Date()
         game.createdAt = now
@@ -123,7 +132,9 @@ final class GameManager {
         let lowercased = trimmed.lowercased()
         if let match = games.first(where: { game in
             game.id.uuidString.lowercased().hasPrefix(lowercased) ||
-            game.name.lowercased() == lowercased
+            game.name.lowercased() == lowercased ||
+            game.playerName.lowercased() == lowercased ||
+            game.companyName.lowercased() == lowercased
         }) {
             return try activateGame(match)
         }
@@ -132,7 +143,7 @@ final class GameManager {
     }
 
     func statusSummary(for game: Game) -> String {
-        localization.statusSummary(name: game.name, lastSaved: game.lastSavedAt)
+        localization.statusSummary(name: game.name, playerName: game.playerName, companyName: game.companyName, lastSaved: game.lastSavedAt)
     }
 
     private func activateGame(_ game: Game) throws -> Game {

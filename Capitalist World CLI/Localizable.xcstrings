@@ -500,13 +500,13 @@
       "localizations": {
         "en": {
           "stringUnit": {
-            "value": "Game: %@ | Last saved: %@",
+            "value": "Game: %@ | Player: %@ | Company: %@ | Last saved: %@",
             "state": "translated"
           }
         },
         "es": {
           "stringUnit": {
-            "value": "Partida: %@ | Último guardado: %@",
+            "value": "Partida: %@ | Jugador: %@ | Empresa: %@ | Último guardado: %@",
             "state": "translated"
           }
         }
@@ -762,6 +762,108 @@
         "es": {
           "stringUnit": {
             "value": "Indica un índice o ID de partida. Uso: '%@ <valor>'. Usa '%@' para listar partidas.",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "start.prompt.playerName": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Enter player name:",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Ingresa el nombre del jugador:",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "start.prompt.companyName": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Enter company name:",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Ingresa el nombre de la empresa:",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "start.error.emptyInput": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Value cannot be empty. Please try again.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "El valor no puede estar vacío. Inténtalo nuevamente.",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "status.label.unknownPlayer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Unknown player",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Jugador desconocido",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "status.label.unknownCompany": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Unknown company",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Empresa desconocida",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "status.label.unknownGame": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Unnamed game",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Partida sin nombre",
             "state": "translated"
           }
         }

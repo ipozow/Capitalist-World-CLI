@@ -10,6 +10,8 @@ enum GameStatus: String {
 final class Game: NSManagedObject {
     @NSManaged var id: UUID
     @NSManaged var name: String
+    @NSManaged var playerName: String
+    @NSManaged var companyName: String
     @NSManaged var status: String
     @NSManaged var createdAt: Date
     @NSManaged var updatedAt: Date
@@ -31,6 +33,18 @@ extension Game {
         nameAttribute.name = "name"
         nameAttribute.attributeType = .stringAttributeType
         nameAttribute.isOptional = false
+
+        let playerNameAttribute = NSAttributeDescription()
+        playerNameAttribute.name = "playerName"
+        playerNameAttribute.attributeType = .stringAttributeType
+        playerNameAttribute.isOptional = false
+        playerNameAttribute.defaultValue = ""
+
+        let companyNameAttribute = NSAttributeDescription()
+        companyNameAttribute.name = "companyName"
+        companyNameAttribute.attributeType = .stringAttributeType
+        companyNameAttribute.isOptional = false
+        companyNameAttribute.defaultValue = ""
 
         let statusAttribute = NSAttributeDescription()
         statusAttribute.name = "status"
@@ -55,6 +69,8 @@ extension Game {
         entity.properties = [
             idAttribute,
             nameAttribute,
+            playerNameAttribute,
+            companyNameAttribute,
             statusAttribute,
             createdAtAttribute,
             updatedAtAttribute,

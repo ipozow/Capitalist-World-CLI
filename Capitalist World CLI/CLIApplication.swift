@@ -47,8 +47,16 @@ final class CLIApplication {
             }
             return true
         case .start:
+            if let active = gameManager.currentGame, active.gameStatus == .active {
+                print(localization.activeGameInProgressMessage(active.name))
+                return true
+            }
+
+            let playerName = readRequiredInput(prompt: localization.playerNamePrompt())
+            let companyName = readRequiredInput(prompt: localization.companyNamePrompt())
+
             do {
-                let game = try gameManager.startGame(named: arguments)
+                let game = try gameManager.startGame(named: arguments, playerName: playerName, companyName: companyName)
                 print(localization.gameStartedMessage(gameManager.statusSummary(for: game)))
             } catch {
                 print(error.localizedDescription)
@@ -118,6 +126,16 @@ final class CLIApplication {
             }
         }
         return nil
+    }
+
+    private func readRequiredInput(prompt: String) -> String {
+        while true {
+            print(prompt)
+            if let line = readLine()?.trimmingCharacters(in: .whitespacesAndNewlines), line.isEmpty == false {
+                return line
+            }
+            print(localization.emptyInputWarning())
+        }
     }
 
     private func printPrompt() {

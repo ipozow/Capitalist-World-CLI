@@ -6,6 +6,7 @@ Capitalist World CLI es un juego de simulación económica pensado para ejecutar
 - Gestión de partidas con Core Data (crear, guardar, abandonar).
 - Prompt interactivo con comandos disponibles en español e inglés (`iniciar`/`start`, `guardar`/`save`, etc.).
 - Recuperación automática de la última partida activa al iniciar la aplicación.
+- Captura interactiva del nombre del jugador y de la empresa al crear una partida.
 - Mensajería consistente gracias al catálogo `Localizable.xcstrings` y una capa de localización reutilizable.
 
 ## Estructura del código
@@ -26,6 +27,8 @@ Capitalist World CLI es un juego de simulación económica pensado para ejecutar
 - `salir` / `exit` / `quit`
 
 Todos los comandos admiten las variantes sin importar el idioma activo.
+
+Al ejecutar `iniciar`, el CLI solicitará interactivamente tu nombre de jugador y el de la empresa antes de crear la partida.
 
 ## Construcción y ejecución
 1. Abre `Capitalist World CLI.xcodeproj` y asegúrate de que los archivos `.swift` y `Localizable.xcstrings` estén incluidos en el target **Capitalist World CLI**.

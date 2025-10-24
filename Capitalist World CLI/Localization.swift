@@ -330,8 +330,14 @@ final class Localization {
         formatted("error.dataDirectory", error.localizedDescription)
     }
 
-    func statusSummary(name: String, lastSaved: Date) -> String {
-        formatted("status.summary", name, isoFormatter.string(from: lastSaved))
+    func statusSummary(name: String, playerName: String, companyName: String, lastSaved: Date) -> String {
+        formatted(
+            "status.summary",
+            sanitizedGameName(name),
+            sanitizedPlayerName(playerName),
+            sanitizedCompanyName(companyName),
+            isoFormatter.string(from: lastSaved)
+        )
     }
 
     func defaultGameName(for date: Date) -> String {
@@ -341,6 +347,33 @@ final class Localization {
         formatter.timeStyle = .short
         let formattedDate = formatter.string(from: date)
         return formatted("default.game.name", formattedDate)
+    }
+
+    func playerNamePrompt() -> String {
+        localized("start.prompt.playerName")
+    }
+
+    func companyNamePrompt() -> String {
+        localized("start.prompt.companyName")
+    }
+
+    func emptyInputWarning() -> String {
+        localized("start.error.emptyInput")
+    }
+
+    private func sanitizedGameName(_ value: String) -> String {
+        let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? localized("status.label.unknownGame") : trimmed
+    }
+
+    private func sanitizedPlayerName(_ value: String) -> String {
+        let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? localized("status.label.unknownPlayer") : trimmed
+    }
+
+    private func sanitizedCompanyName(_ value: String) -> String {
+        let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? localized("status.label.unknownCompany") : trimmed
     }
 
     private func namePlaceholder() -> String {

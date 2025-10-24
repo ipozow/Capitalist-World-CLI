@@ -37,6 +37,8 @@ final class CoreDataStack {
         let storageURL = storageDirectory().appendingPathComponent("\(modelName).sqlite")
         let description = NSPersistentStoreDescription(url: storageURL)
         description.type = NSSQLiteStoreType
+        description.setOption(true as NSNumber, forKey: NSMigratePersistentStoresAutomaticallyOption)
+        description.setOption(true as NSNumber, forKey: NSInferMappingModelAutomaticallyOption)
         return description
     }
 
