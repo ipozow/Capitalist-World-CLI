@@ -56,6 +56,7 @@ final class GameManager {
         game.companyName = trimmedCompany.isEmpty ? companyName : trimmedCompany
 
         game.gameStatus = .active
+        game.balance = 10_000_000
         let now = Date()
         game.createdAt = now
         game.updatedAt = now
@@ -143,7 +144,13 @@ final class GameManager {
     }
 
     func statusSummary(for game: Game) -> String {
-        localization.statusSummary(name: game.name, playerName: game.playerName, companyName: game.companyName, lastSaved: game.lastSavedAt)
+        localization.statusSummary(
+            name: game.name,
+            playerName: game.playerName,
+            companyName: game.companyName,
+            balance: game.balance,
+            lastSaved: game.lastSavedAt
+        )
     }
 
     private func activateGame(_ game: Game) throws -> Game {

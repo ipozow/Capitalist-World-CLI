@@ -13,6 +13,7 @@ final class Game: NSManagedObject {
     @NSManaged var playerName: String
     @NSManaged var companyName: String
     @NSManaged var status: String
+    @NSManaged var balance: Double
     @NSManaged var createdAt: Date
     @NSManaged var updatedAt: Date
     @NSManaged var lastSavedAt: Date
@@ -51,6 +52,12 @@ extension Game {
         statusAttribute.attributeType = .stringAttributeType
         statusAttribute.isOptional = false
 
+        let balanceAttribute = NSAttributeDescription()
+        balanceAttribute.name = "balance"
+        balanceAttribute.attributeType = .doubleAttributeType
+        balanceAttribute.isOptional = false
+        balanceAttribute.defaultValue = 10_000_000.0
+
         let createdAtAttribute = NSAttributeDescription()
         createdAtAttribute.name = "createdAt"
         createdAtAttribute.attributeType = .dateAttributeType
@@ -72,6 +79,7 @@ extension Game {
             playerNameAttribute,
             companyNameAttribute,
             statusAttribute,
+            balanceAttribute,
             createdAtAttribute,
             updatedAtAttribute,
             lastSavedAtAttribute

@@ -66,6 +66,7 @@ final class Localization {
 
     private let locale: Locale
     private let isoFormatter: ISO8601DateFormatter
+    private let currencyFormatter: NumberFormatter
     private let catalog: [String: [String: String]]
 
     private init() {
@@ -87,6 +88,12 @@ final class Localization {
 
         isoFormatter = ISO8601DateFormatter()
         isoFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+
+        currencyFormatter = NumberFormatter()
+        currencyFormatter.locale = locale
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.maximumFractionDigits = 0
+        currencyFormatter.minimumFractionDigits = 0
 
         catalog = Localization.loadCatalog()
     }
@@ -330,12 +337,13 @@ final class Localization {
         formatted("error.dataDirectory", error.localizedDescription)
     }
 
-    func statusSummary(name: String, playerName: String, companyName: String, lastSaved: Date) -> String {
+    func statusSummary(name: String, playerName: String, companyName: String, balance: Double, lastSaved: Date) -> String {
         formatted(
             "status.summary",
             sanitizedGameName(name),
             sanitizedPlayerName(playerName),
             sanitizedCompanyName(companyName),
+            formatBalance(balance),
             isoFormatter.string(from: lastSaved)
         )
     }
@@ -378,5 +386,12 @@ final class Localization {
 
     private func namePlaceholder() -> String {
         localized("placeholder.name")
+    }
+
+    private func formatBalance(_ amount: Double) -> String {
+        if let formatted = currencyFormatter.string(from: NSNumber(value: amount)) {
+            return formatted
+        }
+        return String(format: "%.0f", amount)
     }
 }

@@ -7,6 +7,7 @@ Capitalist World CLI es un juego de simulación económica pensado para ejecutar
 - Prompt interactivo con comandos disponibles en español e inglés (`iniciar`/`start`, `guardar`/`save`, etc.).
 - Recuperación automática de la última partida activa al iniciar la aplicación.
 - Captura interactiva del nombre del jugador y de la empresa al crear una partida.
+- Cada partida comienza con un saldo inicial de $10.000.000.
 - Mensajería consistente gracias al catálogo `Localizable.xcstrings` y una capa de localización reutilizable.
 
 ## Estructura del código

@@ -500,13 +500,13 @@
       "localizations": {
         "en": {
           "stringUnit": {
-            "value": "Game: %@ | Player: %@ | Company: %@ | Last saved: %@",
+            "value": "Game: %@ | Player: %@ | Company: %@ | Balance: %@ | Last saved: %@",
             "state": "translated"
           }
         },
         "es": {
           "stringUnit": {
-            "value": "Partida: %@ | Jugador: %@ | Empresa: %@ | Último guardado: %@",
+            "value": "Partida: %@ | Jugador: %@ | Empresa: %@ | Saldo: %@ | Último guardado: %@",
             "state": "translated"
           }
         }

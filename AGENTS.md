@@ -20,7 +20,7 @@ Este agente expone un CLI para gestionar partidas de "Capitalist World". La inte
 
 ## Comandos soportados
 - `ayuda` / `help`: muestra los comandos disponibles y la partida actual, si existe.
-- `iniciar` / `start` `<nombre>` / `<name>`: inicia una partida solicitando nombre de jugador y empresa (el nombre es opcional y se genera si se omite).
+- `iniciar` / `start` `<nombre>` / `<name>`: inicia una partida solicitando nombre de jugador y empresa (el nombre es opcional y se genera si se omite). Cada partida nueva parte con un saldo de $10.000.000.
 - `guardar` / `save`: persiste la partida activa y actualiza el sello temporal.
 - `abandonar` / `abandon`: marca la partida activa como abandonada.
 - `partidas` / `games` / `list`: lista las partidas almacenadas con su estado y la marca temporal.
