@@ -30,6 +30,7 @@ final class GameManager {
 
     private let stack = CoreDataStack()
     private let localization = Localization.shared
+    private let startingBalance: Double = 10_000_000
     private(set) var currentGame: Game?
 
     private init() {
@@ -56,7 +57,7 @@ final class GameManager {
         game.companyName = trimmedCompany.isEmpty ? companyName : trimmedCompany
 
         game.gameStatus = .active
-        game.balance = 10_000_000
+        game.balance = startingBalance
         let now = Date()
         game.createdAt = now
         game.updatedAt = now
@@ -81,6 +82,7 @@ final class GameManager {
         let now = Date()
         game.lastSavedAt = now
         game.updatedAt = now
+        game.balance = startingBalance
 
         do {
             try stack.saveIfNeeded()
@@ -161,6 +163,9 @@ final class GameManager {
 
         if game.gameStatus != .active {
             game.gameStatus = .active
+        }
+        if game.balance != startingBalance {
+            game.balance = startingBalance
         }
         game.updatedAt = now
 

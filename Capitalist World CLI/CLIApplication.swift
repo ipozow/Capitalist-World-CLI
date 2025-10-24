@@ -1,5 +1,8 @@
 import Foundation
 
+@_silgen_name("RenderPrompt")
+private func RenderPrompt(_ prompt: UnsafePointer<CChar>, _ balance: UnsafePointer<CChar>)
+
 final class CLIApplication {
     private let localization = Localization.shared
     private let gameManager: GameManager
@@ -139,6 +142,15 @@ final class CLIApplication {
     }
 
     private func printPrompt() {
-        FileHandle.standardOutput.write(Data("capitalist> ".utf8))
+        let prompt = "capitalist> "
+        let defaultBalance = 10_000_000.0
+        let balanceValue = gameManager.currentGame?.balance ?? defaultBalance
+        let balanceText = localization.formattedBalance(balanceValue)
+
+        prompt.withCString { promptPtr in
+            balanceText.withCString { balancePtr in
+                RenderPrompt(promptPtr, balancePtr)
+            }
+        }
     }
 }

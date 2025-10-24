@@ -369,6 +369,10 @@ final class Localization {
         localized("start.error.emptyInput")
     }
 
+    func formattedBalance(_ amount: Double) -> String {
+        formatBalance(amount)
+    }
+
     private func sanitizedGameName(_ value: String) -> String {
         let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
         return trimmed.isEmpty ? localized("status.label.unknownGame") : trimmed
