@@ -1,0 +1,771 @@
+{
+  "version": "1.0",
+  "sourceLanguage": "en",
+  "strings": {
+    "app.ready": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Capitalist World CLI ready. Type '%@' to view options.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Capitalist World CLI listo. Escribe '%@' para ver opciones.",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.abandon.aliases": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "abandon,abandonar",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "abandonar,abandon",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.abandon.primary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "abandon",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "abandonar",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.alias.separator": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": " / ",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": " / ",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.exit.aliases": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "exit,quit,salir",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "salir,exit,quit",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.exit.primary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "exit",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "salir",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.help.aliases": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "help,ayuda",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "ayuda,help",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.help.primary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "help",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "ayuda",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.overview.bulletPrefix": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "- ",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "- ",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.overview.header": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Available commands:",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Comandos disponibles:",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.save.aliases": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "save,guardar",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "guardar,save",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.save.primary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "save",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "guardar",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.start.aliases": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "start,begin,iniciar",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "iniciar,start,begin",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.start.primary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "start",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "iniciar",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "current.game": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Current game: %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Partida actual: %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "default.game.name": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Game %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Partida %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "error.activeGame": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "There is already an active game (%@). Use '%@' or '%@' before starting another.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Ya hay una partida activa (%@). Usa '%@' o '%@' antes de iniciar otra.",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "error.coreData": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Failed to load Core Data: %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Error al cargar Core Data: %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "error.dataDirectory": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Could not prepare the data folder: %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "No se pudo preparar la carpeta de datos: %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "error.noActiveGame": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "No active game found. Use '%@ %@' to begin.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "No hay una partida activa. Usa '%@ %@' para comenzar.",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "error.persistence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Could not save the game: %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "No se pudo guardar la partida: %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "exit.warning": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "An active game is running: %@. Remember to save before exiting.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Hay una partida activa: %@. No olvides guardar antes de salir.",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "exiting": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Exiting...",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Saliendo...",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "game.abandoned": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Game abandoned. Use '%@' to begin another.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Partida abandonada. Usa '%@' para comenzar otra.",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "game.saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Game saved: %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Partida guardada: %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "game.started": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Game started: %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Partida iniciada: %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "input.ended": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Input ended. Exiting...",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Entrada finalizada. Saliendo...",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "placeholder.name": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "<name>",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "<nombre>",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "previous.loaded": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Previous game loaded: %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Partida previa cargada: %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "status.summary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Game: %@ | Last saved: %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Partida: %@ | Último guardado: %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "unknown.command": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Command pending implementation: %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Comando pendiente de implementar: %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.list.primary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "games",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "partidas",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.list.aliases": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "games,partidas,list",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "partidas,games,list",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "games.header": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Saved games:",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Partidas registradas:",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "games.empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "No games available yet. Use '%@' to create one.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Aún no hay partidas disponibles. Usa '%@' para crear una.",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "games.entry": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "%d. [%@] %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "%d. [%@] %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "status.label.active": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Active",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Activa",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "status.label.abandoned": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Abandoned",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Abandonada",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "status.label.unknown": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Unknown",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Desconocido",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "error.invalidSelection": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "No game matches '%@'. Try '%@' to list games.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "No se encontró partida para '%@'. Usa '%@' para ver el listado.",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "error.noGames": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "No games available yet. Use '%@' to create one.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Aún no hay partidas disponibles. Usa '%@' para crear una.",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.load.primary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "load",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "cargar",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.load.aliases": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "load,cargar",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "cargar,load",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "load.success": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Game loaded: %@",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Partida cargada: %@",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "load.missingArgument": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Provide a game index or ID. Usage: '%@ <value>'. Try '%@' to list games.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Indica un índice o ID de partida. Uso: '%@ <valor>'. Usa '%@' para listar partidas.",
+            "state": "translated"
+          }
+        }
+      }
+    }
+  }
+}
