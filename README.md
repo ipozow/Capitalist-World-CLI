@@ -36,6 +36,8 @@ Al ejecutar `iniciar`, el CLI solicitará interactivamente tu nombre de jugador 
 2. Compila y ejecuta el esquema desde Xcode o usa `swift run` desde la carpeta del proyecto.
 3. (Opcional) El catálogo de cadenas permite definir más idiomas desde Xcode > File Inspector.
 
+> Nota: al ejecutar el esquema desde Xcode (Cmd+R), la app se relanza automáticamente en Terminal para ofrecer la experiencia interactiva completa. Si prefieres desactivar este comportamiento (por ejemplo, en CI), exporta `CAPITALIST_DISABLE_TERMINAL=1`.
+
 ### Sobrescribir idioma
 El runtime detecta el idioma desde `Locale.preferredLanguages`, pero puedes forzarlo con:
 

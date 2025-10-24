@@ -9,6 +9,7 @@ Este agente expone un CLI para gestionar partidas de "Capitalist World". La inte
 - `GameManager`: orquesta la vida de una partida activa y valida la persistencia.
 - `Localization`: centraliza los textos y alias de comandos apoyándose en `Localizable.xcstrings`.
 - `Localizable.xcstrings`: catálogo de cadenas generado por Xcode con variantes en español e inglés.
+- `TerminalLauncher`: detecta ejecuciones desde Xcode y relanza el binario en Terminal (se puede desactivar con `CAPITALIST_DISABLE_TERMINAL=1`).
 - `CLIApplication`: procesa comandos del usuario y delega la lógica al `GameManager`.
 - `main.swift`: punto de entrada mínimo que simplemente inicia la aplicación CLI.
 
