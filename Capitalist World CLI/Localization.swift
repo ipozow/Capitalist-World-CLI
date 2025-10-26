@@ -373,6 +373,28 @@ final class Localization {
         formatBalance(amount)
     }
 
+    func promptBalanceLabel() -> String {
+        localized("prompt.balance")
+    }
+
+    func promptProfitsLabel() -> String {
+        localized("prompt.profits")
+    }
+
+    func promptDateLabel() -> String {
+        localized("prompt.date")
+    }
+
+    func promptReferenceDateString() -> String {
+        let calendar = Calendar(identifier: .gregorian)
+        var components = DateComponents()
+        components.year = 1900
+        components.month = 1
+        components.day = 1
+        let referenceDate = calendar.date(from: components) ?? Date(timeIntervalSince1970: 0)
+        return formatPromptDate(referenceDate)
+    }
+
     private func sanitizedGameName(_ value: String) -> String {
         let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
         return trimmed.isEmpty ? localized("status.label.unknownGame") : trimmed
@@ -397,5 +419,21 @@ final class Localization {
             return formatted
         }
         return String(format: "%.0f", amount)
+    }
+
+    private func formatPromptDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = locale
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+
+        switch language {
+        case .spanish:
+            formatter.dateFormat = "dd-MM-yyyy"
+        case .english:
+            formatter.dateFormat = "MM-dd-yyyy"
+        }
+
+        return formatter.string(from: date)
     }
 }

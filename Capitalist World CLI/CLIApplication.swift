@@ -1,7 +1,7 @@
 import Foundation
 
 @_silgen_name("RenderPrompt")
-private func RenderPrompt(_ prompt: UnsafePointer<CChar>, _ balance: UnsafePointer<CChar>)
+private func RenderPrompt(_ prompt: UnsafePointer<CChar>, _ statusLine: UnsafePointer<CChar>)
 
 final class CLIApplication {
     private let localization = Localization.shared
@@ -146,10 +146,22 @@ final class CLIApplication {
         let defaultBalance = 10_000_000.0
         let balanceValue = gameManager.currentGame?.balance ?? defaultBalance
         let balanceText = localization.formattedBalance(balanceValue)
+        let profitsText = localization.formattedBalance(0)
+        let dateText = localization.promptReferenceDateString()
+        let columns: [(label: String, value: String)] = [
+            (localization.promptBalanceLabel(), balanceText),
+            (localization.promptProfitsLabel(), profitsText),
+            (localization.promptDateLabel(), dateText)
+        ]
+
+        let separator = String(repeating: " ", count: 4)
+        let statusLine = columns
+            .map { "\($0.label): \($0.value)" }
+            .joined(separator: separator)
 
         prompt.withCString { promptPtr in
-            balanceText.withCString { balancePtr in
-                RenderPrompt(promptPtr, balancePtr)
+            statusLine.withCString { statusPtr in
+                RenderPrompt(promptPtr, statusPtr)
             }
         }
     }

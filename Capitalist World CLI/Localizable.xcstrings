@@ -818,6 +818,57 @@
         }
       }
     },
+    "prompt.balance": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Balance",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Saldo",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "prompt.profits": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Profits",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Beneficios",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "prompt.date": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Date",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Fecha",
+            "state": "translated"
+          }
+        }
+      }
+    },
     "status.label.unknownPlayer": {
       "extractionState": "manual",
       "localizations": {
