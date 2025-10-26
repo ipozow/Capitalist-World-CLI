@@ -733,6 +733,40 @@
         }
       }
     },
+    "command.speed.primary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "speed",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "velocidad",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "command.speed.aliases": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "speed,velocidad",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "velocidad,speed",
+            "state": "translated"
+          }
+        }
+      }
+    },
     "load.success": {
       "extractionState": "manual",
       "localizations": {
@@ -864,6 +898,108 @@
         "es": {
           "stringUnit": {
             "value": "Fecha",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "prompt.speed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Speed",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Velocidad",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "speed.value.format": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "x%d",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "x%d",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "speed.validOptions": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "x0, x1, x2, x3, x4, x5",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "x0, x1, x2, x3, x4, x5",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "speed.missingArgument": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "You must provide a speed (e.g. %@).",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Debes indicar una velocidad (por ejemplo %@).",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "speed.invalidValue": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Unknown speed '%@'. Valid options: %@.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Velocidad desconocida '%@'. Opciones válidas: %@.",
+            "state": "translated"
+          }
+        }
+      }
+    },
+    "speed.updated": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "value": "Speed set to %@.",
+            "state": "translated"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "value": "Velocidad ajustada a %@.",
             "state": "translated"
           }
         }

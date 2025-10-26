@@ -7,6 +7,7 @@ enum CommandIdentifier: CaseIterable {
     case abandon
     case list
     case load
+    case speed
     case exit
 
     var key: String {
@@ -23,6 +24,8 @@ enum CommandIdentifier: CaseIterable {
             return "command.list"
         case .load:
             return "command.load"
+        case .speed:
+            return "command.speed"
         case .exit:
             return "command.exit"
         }
@@ -385,14 +388,45 @@ final class Localization {
         localized("prompt.date")
     }
 
-    func promptReferenceDateString() -> String {
+    func promptSpeedLabel() -> String {
+        localized("prompt.speed")
+    }
+
+    func promptReferenceDate() -> Date {
         let calendar = Calendar(identifier: .gregorian)
         var components = DateComponents()
         components.year = 1900
         components.month = 1
         components.day = 1
-        let referenceDate = calendar.date(from: components) ?? Date(timeIntervalSince1970: 0)
-        return formatPromptDate(referenceDate)
+        return calendar.date(from: components) ?? Date(timeIntervalSince1970: 0)
+    }
+
+    func promptFormattedDate(from date: Date) -> String {
+        formatPromptDate(date)
+    }
+
+    func promptReferenceDateString() -> String {
+        promptFormattedDate(from: promptReferenceDate())
+    }
+
+    func speedValueString(for rawValue: Int) -> String {
+        formatted("speed.value.format", rawValue)
+    }
+
+    func speedMissingArgumentMessage(_ example: String) -> String {
+        formatted("speed.missingArgument", example)
+    }
+
+    func speedInvalidValueMessage(_ input: String, validOptions: String) -> String {
+        formatted("speed.invalidValue", input, validOptions)
+    }
+
+    func speedUpdatedMessage(_ speedValue: String) -> String {
+        formatted("speed.updated", speedValue)
+    }
+
+    func speedValidOptionsList() -> String {
+        localized("speed.validOptions")
     }
 
     private func sanitizedGameName(_ value: String) -> String {
