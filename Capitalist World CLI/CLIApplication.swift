@@ -4,6 +4,10 @@ import Foundation
 private func RenderPrompt(_ prompt: UnsafePointer<CChar>, _ statusLine: UnsafePointer<CChar>)
 @_silgen_name("UpdateStatusLine")
 private func UpdateStatusLine(_ statusLine: UnsafePointer<CChar>)
+@_silgen_name("SuspendPromptUpdates")
+private func SuspendPromptUpdates()
+@_silgen_name("ResumePromptUpdates")
+private func ResumePromptUpdates()
 
 final class CLIApplication {
     private struct PromptSnapshot {
@@ -70,6 +74,8 @@ final class CLIApplication {
     private func handleCommand(_ input: String) -> Bool {
         let trimmed = input.trimmingCharacters(in: .whitespacesAndNewlines)
         guard trimmed.isEmpty == false else { return true }
+
+        SuspendPromptUpdates()
 
         if trimmed.hasPrefix(":") {
             let shortcutArgument = trimmed.dropFirst().trimmingCharacters(in: .whitespacesAndNewlines)
@@ -225,6 +231,8 @@ final class CLIApplication {
     }
 
     private func printPrompt() {
+        ResumePromptUpdates()
+
         let promptText = "capitalist> "
         let defaultBalance = 10_000_000.0
         let balanceValue = gameManager.currentGame?.balance ?? defaultBalance
